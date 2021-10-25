@@ -6,6 +6,7 @@ Description
 
 The idea of this project is providing code to generate a certain special kind of crosswords sometimes called *Literary Cryptograms*. 
 Rather than a complex description of how they look like, I think that an example will convey every relevant detail. Start by choosing a literary work and a quote from it, for instance:
+
 > "If we admit that human life can be ruled by reason, then all possibility of life is destroyed"
 >> **Leo Tolstoy, War and Peace**
 
