@@ -9,9 +9,9 @@ TIME_LIMIT = 180 # Second to wait for a solution
 def SCIP(values_path):
 	'''
 		Runs SCIP solver on the model and returns whether a solution was found or not.		
-	'''
-	
-	os.system('scip.exe -c \" set limits time {} read model.zpl optimize write solution sol.out quit\"'.format(TIME_LIMIT))
+	'''	
+	command = 'scip.exe -c \" set limits time {} read model.zpl optimize write solution sol.out quit\"'.format(TIME_LIMIT)
+	os.system(command)
 
 	# checks whether there is some solution
 
@@ -24,14 +24,14 @@ def SCIP(values_path):
 
 def codify_text(path, text):
 	'''
-		Writes to path the vector form of the words passed in string text
+		Writes to path the vector form of the words passed in the string text
 	'''
+	occur = [0 for i in range(26)]
+	for c in text:
+		cod = ord(c) - ord('a')
+		occur[cod] += 1
 
-	with open(path,"w") as f:
-		occur = [0 for i in range(26)]
-		for c in text:
-			cod = ord(c) - ord('a')
-			occur[cod] += 1
+	with open(path,"w") as f:		
 		for l in range(26):
 			f.write(str(l+1) + " " + str(occur[l]) + "\n")
 
@@ -133,7 +133,6 @@ def solve(book_path, title):
 	'''
 		Iterates through excerpts of a book in plain text and stops when a solution is found.
 	'''
-
 	codify_text('title_vector.txt', title)
 
 	regenter = compile('(\n)\\1+')
@@ -197,6 +196,7 @@ def solve(book_path, title):
 	return
 
 if __name__ == '__main__':
+
 	parser = argparse.ArgumentParser(description='Solves the problem of finding a cryptogram given a specific excerpt and a title. The length of the excerpt should be roughly between 6 and 11 times the length of the title.')
 
 	parser.add_argument('excerpt_path', help='The path to the file where the excerpt is written')

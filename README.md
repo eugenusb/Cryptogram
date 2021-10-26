@@ -8,7 +8,7 @@ The idea of this project is providing code to generate a certain special kind of
 Rather than a complex description of how they look like, I think that an example will convey every relevant detail. Start by choosing a literary work and a quote from it, for instance:
 
 > "If we admit that human life can be ruled by reason, then all possibility of life is destroyed"
->> **Leo Tolstoy, War and Peace**
+**Leo Tolstoy, War and Peace**
 
 The idea is to find a set of words such that:
 + Their initials form the title of the work.
@@ -57,8 +57,8 @@ The dictionary of words paired with its relative frequencies was taken from this
 Usage
 ----------
 
-To generate a literary cryptogram, you will first to fill the selected excerpt and title in `optimization > excerpt.txt` and `optimization > title.txt`, respectively.
-Once this is done, the following step depends on whether or not you have [SCIP](https://www.scipopt.org/) installed. SCIP is a fast non-commercial solver for mixed integer programming (MIP), but it requires a licence for non academic purposes.
+To generate a literary cryptogram, you will first need to fill the selected excerpt and title in `optimization > excerpt.txt` and `optimization > title.txt`, respectively.
+Once this is done, the following step depends on whether or not you have [SCIP](https://www.scipopt.org/) installed. SCIP is a fast non-commercial solver for mixed integer programming (MIP), but it requires a license for non academic purposes.
 
 ## With SCIP
 
@@ -66,4 +66,4 @@ Simply go to the `optimization` folder and type `> python solve_script.py excerp
 
 ## Without SCIP
 
-Running as before `> python solve_script.py excerpt.txt title.txt` would obviously fail but it will leave prepared the integer program at `optimization > model.zpl`. Then, you can download Zimpl [here](https://zimpl.zib.de/) and run `> zimpl model.zpl`. This will generate a `model.lp` file that can be fed and optimized by any other solver you have acces to. Alternatively, running `> zimpl -t mps model.zpl` generates a `model.mps` file that can be read by [PuLP](https://coin-or.github.io/pulp/).
+Running as before `> python solve_script.py excerpt.txt title.txt` would obviously fail but it will leave prepared the integer program at `optimization > model.zpl`. Then, you can download Zimpl [here](https://zimpl.zib.de/) and run `> zimpl model.zpl`. This will generate a `model.lp` file that can be fed and optimized by any other solver you have access to. Alternatively, running `> zimpl -t mps model.zpl` generates a `model.mps` file that can be read by [PuLP](https://coin-or.github.io/pulp/).
