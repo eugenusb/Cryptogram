@@ -8,7 +8,7 @@ The idea of this project is providing code to generate a certain special kind of
 Rather than a complex description of how they look like, I think that an example will convey every relevant detail. Start by choosing a literary work and a quote from it, for instance:
 
 > "If we admit that human life can be ruled by reason, then all possibility of life is destroyed"
-**Leo Tolstoy, War and Peace**
+> **Leo Tolstoy, War and Peace**
 
 The idea is to find a set of words such that:
 + Their initials form the title of the work.
@@ -49,7 +49,7 @@ Project Organization
 
     ├── data                 <- folder holding English dictionary paired with values (according to its frequency) and vectorized codifications of words.
     ├── optimization         <- folder holding integer programming model, input files and a Python script to run the solver
-    ├── src       			 <- folder holding some auxiliary Python scripts to generate the data. 
+    ├── src                  <- folder holding some auxiliary Python scripts to generate the data. 
 
 The dictionary of words paired with its relative frequencies was taken from this [repository](https://github.com/hackerb9/gwordlist).
 
