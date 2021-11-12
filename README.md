@@ -41,7 +41,7 @@ where the letters should be permuted according to the 0-indexed numbers in brack
     **C**  (22) h (41) a (44) f (59) f (62) e (42) r (70) e (63) d (74);  
     **E**  (67) m (15) b (52) e (73).
 
-For more details, check my [post](https://eugenusb.github.io/optimization/2021/10/11/Literary-Cryptogram.html).
+For more details, check my [post](https://eugenusb.github.io/optimization/2021/11/12/Literary-Cryptogram.html).
 
 > **Warning:** Rather than a mature and fully developed project, this repository is just intended as a proof of concept and you probably would need to write and modify code to suit your needs.
 
